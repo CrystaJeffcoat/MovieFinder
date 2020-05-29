@@ -29,4 +29,19 @@ JS & JQuery -
   
   
   
-![Userflowdiagram.png] https://github.com/CrystaJeffcoat/MovieFinder/blob/master/assets/Userflowdiagram.png
+![Userflowdiagram.png](https://github.com/CrystaJeffcoat/MovieFinder/blob/master/assets/Userflowdiagram.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
