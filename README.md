@@ -25,13 +25,11 @@ JS & JQuery -
   On-Click back to search function & link to next page
   On-Click for clear button
   On-Click movie suggestions event to return further suggestions
-  https://files.slack.com/files-pri/T0115DT4612-F014G940S3D/screen_shot_2020-05-28_at_9.12.12_pm.png
-  
   
   
 ![Userflowdiagram.png](https://github.com/CrystaJeffcoat/MovieFinder/blob/master/assets/Userflowdiagram.png)
 
-
+![wireframe.png](https://github.com/CrystaJeffcoat/MovieFinder/blob/master/assets/wireframe.png)
 
 
 
