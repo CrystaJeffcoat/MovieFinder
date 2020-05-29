@@ -29,3 +29,4 @@ JS & JQuery -
   
   
   
+![ScreenShot] https://github.com/CrystaJeffcoat/MovieFinder/blob/master/assets/User%20flow%20diagram.png
