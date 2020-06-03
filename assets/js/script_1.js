@@ -1,7 +1,7 @@
 /* initalized variables from html */
-// const movieInput = $("#search");
-// const searchBtn = $("#searchBtn");
-// const clearBtn = $("placeholder");
+const movieInput = document.getElementById("search-bar");
+const searchBtn = document.getElementById("searchBtn");
+const clearBtn = document.getElementById("clearBtn");
 // const movieContainerEl = $("#");
 // const movieSimilarEl = $("placeholder");
 
@@ -24,7 +24,23 @@ const tasteDiveURL = (movieInput, apikey) => `https://cors-anywhere.herokuapp.co
 /* query function */
  function fetchMovieSimilarity(movie){
      return fetch(tasteDiveURL(movie, APIKEY1)).then((response) => response.json());
+     
 };
+
+function similarMovies(search) {
+    const similarMovieList = document.getElementById("movie-list");
+    const similarMovieList1 = document.getElementById("movie-list1");
+    const similarMovieList2 = document.getElementById("movie-list2");
+
+    fetchMovieSimilarity(search).then((data) => {
+        similarMovieList.textContent = `${data.Similar.Results[0].Name}`
+        similarMovieList1.textContent = `${data.Similar.Results[1].Name}`
+        similarMovieList2.textContent = `${data.Similar.Results[2].Name}`
+    
+    })
+
+}
+
 
 
 // /* function to clear the elements */
