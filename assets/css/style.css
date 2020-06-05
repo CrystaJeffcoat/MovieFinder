@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .main-content {
     display: block;
@@ -30,4 +31,9 @@
 
 #related-movies {
     margin-top: 30px;
+=======
+img {
+    height: 350 px;
+    width: 250 px;
+>>>>>>> sthapa411
 }
