@@ -1,3 +1,4 @@
+console.log("hello")
 /* initalized variables from html */
 const movieInput = document.getElementById("search-bar");
 const searchBtn = document.getElementById("searchBtn");
@@ -17,9 +18,9 @@ const tasteDiveURL = (movieInput, apikey) => `https://cors-anywhere.herokuapp.co
 };
 
 function similarMovies(search) {
-    const similarMovieList = document.getElementById("movie-list");
-    const similarMovieList1 = document.getElementById("movie-list1");
-    const similarMovieList2 = document.getElementById("movie-list2");
+    const similarMovieList = document.getElementById("rel-movie-1");
+    const similarMovieList1 = document.getElementById("rel-movie-2");
+    const similarMovieList2 = document.getElementById("rel-movie-3");
 
     fetchMovieSimilarity(search).then((data) => {
         similarMovieList.textContent = `${data.Similar.Results[0].Name}`
@@ -43,6 +44,7 @@ function similarMovies(search) {
 searchBtn.addEventListener("click", function(){
   event.preventDefault();
   
+  console.log(this)
   const search = movieInput.value;
   
   similarMovies(search);
