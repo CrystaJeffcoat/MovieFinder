@@ -1,5 +1,5 @@
 
-.search-bar {
+.main-content {
     display: block;
     position: relative;
     top: 100px;
@@ -26,4 +26,8 @@
     display: block;
     margin: auto;
     padding-top: 40px;
+}
+
+#related-movies {
+    margin-top: 30px;
 }
