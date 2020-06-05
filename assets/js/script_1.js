@@ -39,17 +39,23 @@ function similarMovies(search) {
 
         fetchMovieData(movie1).then((data) => {
             const movie1Poster = `${data.Poster}`
+            const movie1Rating = `${data.Rated}`
             console.log(movie1Poster)
+            console.log(movie1Rating)
         })
 
         fetchMovieData(movie2).then((data) => {
             const movie2Poster = `${data.Poster}`
+            const movie2Rating = `${data.Rated}`
             console.log(movie2Poster)
+            console.log(movie2Rating)
         })
 
         fetchMovieData(movie3).then((data) => {
             const movie3Poster = `${data.Poster}`
+            const movie3Rating = `${data.Rated}`
             console.log(movie3Poster)
+            console.log(movie3Rating)
         })
     })
 
