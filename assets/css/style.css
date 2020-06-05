@@ -1,4 +1,25 @@
+.main-content {
+    display: block;
+    position: relative;
+    top: 100px;
+}
 
+.search-bar {
+    display: block;
+    position: relative;
+    top: 100px;
+}
+
+#search-bar {
+    text-align: center;
+    color: white;
+    margin: auto;
+    padding-top: 40px;
+}
+
+#related-movies {
+    margin-top: 30px;
+} 
 
 @media screen and (min-width: 350px) {
     body {
