@@ -2,18 +2,17 @@
 const movieInput = document.getElementById("search-bar");
 const searchBtn = document.getElementById("searchBtn");
 const clearBtn = document.getElementById("clearBtn");
-// const movieContainerEl = $("#");
-// const movieSimilarEl = $("placeholder");
 
 /* tastedive api key */
 const APIKEY1 = "373213-schoolpr-R7IG77YE";
-const APIKEY2 = "trilogy"
+/* OMBd api key */
+const APIKEY2 = "trilogy";
 
 /*query urls */
-const tasteDiveURL = (movieInput, apikey) => `https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?limit=3&q=movie:${movieInput}&k=${APIKEY1}`;
+const tasteDiveURL = (movieInput, apikey) => `https://cors-anywhere.herokuapp.com/http://tastedive.com/api/similar?limit=3&q=movie:${movieInput}&k=${APIKEY1}`;
 const ombdURL = (movieInput, apikey) => `https://www.omdbapi.com/?t=${movieInput}&apikey=${APIKEY2}`;
 
-/* query function */
+/* query functions */
 function fetchMovieData(movie){
     return fetch(ombdURL(movie, APIKEY2)).then((response) => response.json());
 };
@@ -22,7 +21,7 @@ function fetchMovieData(movie){
      return fetch(tasteDiveURL(movie, APIKEY1)).then((response) => response.json());
      
 };
-
+/* function that grabs info of movies similar searched from taste dive as well as movie data from OMBd */
 function similarMovies(search) {
     const similarMovieList = document.getElementById("rel-movie-1");
     const similarMovieList1 = document.getElementById("rel-movie-2");
@@ -38,24 +37,27 @@ function similarMovies(search) {
         similarMovieList2.textContent = movie3;
 
         fetchMovieData(movie1).then((data) => {
-            const movie1Poster = `${data.Poster}`
-            const movie1Rating = `${data.Rated}`
-            console.log(movie1Poster)
-            console.log(movie1Rating)
+            const movie1Poster = document.getElementById("rel-poster-1");
+            const movie1Rating = document.getElementById("rel-rating-1");
+
+            movie1Poster.setAttribute("src", data.Poster)
+            movie1Rating.textContent = `Rated: ${data.Rated}`
         })
 
         fetchMovieData(movie2).then((data) => {
-            const movie2Poster = `${data.Poster}`
-            const movie2Rating = `${data.Rated}`
-            console.log(movie2Poster)
-            console.log(movie2Rating)
+            const movie2Poster = document.getElementById("rel-poster-2");
+            const movie2Rating = document.getElementById("rel-rating-2");
+
+            movie2Poster.setAttribute("src", data.Poster)
+            movie2Rating.textContent = `Rated: ${data.Rated}`
         })
 
         fetchMovieData(movie3).then((data) => {
-            const movie3Poster = `${data.Poster}`
-            const movie3Rating = `${data.Rated}`
-            console.log(movie3Poster)
-            console.log(movie3Rating)
+            const movie3Poster = document.getElementById("rel-poster-3");
+            const movie3Rating = document.getElementById("rel-rating-3");
+
+            movie3Poster.setAttribute("src", data.Poster)
+            movie3Rating.textContent = `Rated: ${data.Rated}`
         })
     })
 
