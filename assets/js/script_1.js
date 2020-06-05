@@ -63,7 +63,7 @@ function similarMovies(search) {
 
 }
 
-similarMovies("frozen")
+// similarMovies("frozen")
 
 // /* function to clear the elements */
 // function clear(el) {
