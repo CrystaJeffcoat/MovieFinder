@@ -12,6 +12,7 @@ const APIKEY2 = "trilogy";
 const tasteDiveURL = (movieInput, apikey) => `https://cors-anywhere.herokuapp.com/http://tastedive.com/api/similar?limit=3&q=movie:${movieInput}&k=${APIKEY1}`;
 const ombdURL = (movieInput, apikey) => `https://www.omdbapi.com/?t=${movieInput}&apikey=${APIKEY2}`;
 
+
 /* query functions */
 function fetchMovieData(movie){
     return fetch(ombdURL(movie, APIKEY2)).then((response) => response.json());
@@ -36,12 +37,24 @@ function similarMovies(search) {
         similarMovieList1.textContent = movie2;
         similarMovieList2.textContent = movie3;
 
+        fetchMovieData(search).then((data) => {
+            const mainPoster = document.getElementById("mposter");
+            const mrating = document.getElementById("mrating");
+            const movieTitle = document.getElementById("mtitle");
+            const movieplot = document.getElementById("plot");
+
+            mainPoster.setAttribute("src", data.Poster)
+            mrating.textContent = `Rated: ${data.Rated}`
+            mtitle.textContent = `${data.Title}`
+            movieplot.textContent = `${data.Plot}`
+        })
+
         fetchMovieData(movie1).then((data) => {
             const movie1Poster = document.getElementById("rel-poster-1");
             const movie1Rating = document.getElementById("rel-rating-1");
 
             movie1Poster.setAttribute("src", data.Poster)
-            movie1Rating.textContent = `Rated: ${data.Rated}`
+           // movie1Rating.textContent = `Rated: ${data.Rated}`
         })
 
         fetchMovieData(movie2).then((data) => {
@@ -81,3 +94,5 @@ searchBtn.addEventListener("click", function(){
   similarMovies(search);
 
 });
+
+
