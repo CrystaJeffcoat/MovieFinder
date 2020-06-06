@@ -33,14 +33,15 @@
         <div class="col s12">
           <div class="card">
             <div class="card-image">
-              <img id="rel-poster-1" src="https://m.media-amazon.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_SX300.jpg">
+              <img id="mposter" class = "mainposter" src="https://m.media-amazon.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_SX300.jpg">
             </div>
             <div class="card-content">
+                <div id = "mrating"></div>
               <p><a href="#">This is a link</a></p>
             </div>
             <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Movie Title<i class="material-icons right">close</i></span>
-              <p>Here is some more information about this movie that is only revealed once clicked on.</p>
+              <span id = "mtitle" class="card-title grey-text text-darken-4">Movie Title<i class="material-icons right">close</i></span>
+              <p id = "plot">Here is some more information about this movie that is only revealed once clicked on.</p>
             </div>
             </div>
         </div>
@@ -71,7 +72,7 @@
             <div class="col s6">
               Movie Title
             </div>
-            <div class="col s6 rating">
+            <div class="col s6 rating" id="rel-rating-1">
               rating:__
             </div>
             <br>
@@ -82,12 +83,12 @@
       <div class="col s12 m4">
         <div class="card">
           <div class="card-image poster">
-            <img id="rel-poster-1" src="https://m.media-amazon.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_SX300.jpg">
+            <img id="rel-poster-2" src="https://m.media-amazon.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_SX300.jpg">
           <div class="card-content">
             <div class="col s6" id="rel-movie-2">
               Movie Title
             </div>
-            <div class="col s6 rating">
+            <div class="col s6 rating" id="rel-rating-2">
               rating:__
             </div>
             <br>
@@ -98,12 +99,12 @@
       <div class="col s12 m4">
         <div class="card">
           <div class="card-image">
-            <img id="rel-poster-1" src="https://m.media-amazon.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_SX300.jpg">
+            <img id="rel-poster-3" src="https://m.media-amazon.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_SX300.jpg">
           <div class="card-content">
             <div class="col s6" id="rel-movie-3">
               Movie Title
             </div>
-            <div class="col s6">
+            <div class="col s6" id="rel-rating-3">
               rating:__
             </div>
             <br>
@@ -113,7 +114,10 @@
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    <script type="text/javascript"></script>
+
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
   crossorigin="anonymous"></script>
   <script 
@@ -122,5 +126,6 @@
   crossorigin="anonymous">
   </script>
   <script src = "assets/js/script_1.js"></script>
+  
 </body>
 </html>
