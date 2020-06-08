@@ -54,7 +54,7 @@ function similarMovies(search) {
             const movie1Rating = document.getElementById("rel-rating-1");
 
             movie1Poster.setAttribute("src", data.Poster)
-           // movie1Rating.textContent = `Rated: ${data.Rated}`
+            movie1Rating.textContent = `Rated: ${data.Rated}`
         })
 
         fetchMovieData(movie2).then((data) => {
