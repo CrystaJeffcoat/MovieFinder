@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 .main-content {
     display: block;
     position: relative;
@@ -31,9 +29,18 @@
 
 #related-movies {
     margin-top: 30px;
-=======
-img {
-    height: 350 px;
-    width: 250 px;
->>>>>>> sthapa411
+}
+
+@media screen and (min-width: 350px) {
+    body {
+     width: 100%;
+     }
+    }
+ 
+ 
+ @media screen and (min-width: 768px) {
+     body {
+         margin-left: 30px;
+         margin-left: 30px;
+     }
 }
