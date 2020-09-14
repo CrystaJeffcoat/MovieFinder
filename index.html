@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Free to Me!</title>
 </head>
 <body>
 
@@ -22,7 +24,6 @@
           <textarea id="search-bar" class="materialize-textarea"></textarea>
           <label for="movie-title">Search Movie Title</label>
           <button id="searchBtn" class="btn waves-effect waves-light" type="submit" name="action">Search</button>
-          <button id="clearBtn" class="btn waves-effect waves-light" type="submit" name="action">Clear</button>
         </div>
       </div>
     </div>
@@ -35,15 +36,17 @@
             <div class="card-image">
               <img id="mposter" class = "mainposter" src="https://m.media-amazon.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_SX300.jpg">
             </div>
-            <div class="card-content">
-                <div id = "mrating"></div>
-              <p><a href="#">This is a link</a></p>
+           <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Click for Movie Info<i class="material-icons right"></i></span>
+              <p><a href="#"></a></p>
             </div>
             <div class="card-reveal">
               <span id = "mtitle" class="card-title grey-text text-darken-4">Movie Title<i class="material-icons right">close</i></span>
               <p id = "plot">Here is some more information about this movie that is only revealed once clicked on.</p>
+              <p id = "mrating"></p>
             </div>
             </div>
+            
         </div>
       </div>
     </div>
@@ -52,8 +55,15 @@
     <div class="container valign-wrapper">
       <div class="row">
         <div class="col s12" id="platforms">
-
+          <h4>Watch on these platforms:</h2>
+          
           <div class="col" id="icon-div"> 
+            <i class="material-icons"></i>
+          </div>
+          <div class="col" id="icon-div2"> 
+            <i class="material-icons"></i>
+          </div>
+          <div class="col" id="icon-div3"> 
             <i class="material-icons"></i>
           </div>
         </div>
@@ -63,20 +73,21 @@
     <!--  related movie titles go here  -->
     <div class="container valign-wrapper">
       <div class="row" id="related-movies">
-
+      <h4>You may also Like:</h2>
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image poster" >
               <img id="rel-poster-1" src="https://m.media-amazon.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_SX300.jpg">
             </div>
             <div class="card-content">
-              <div class="col s6" id="rel-movie-1">
-                Movie Title
-              </div>
-              <div class="col s6 rating" id="rel-rating-1">
-                rating:__
-              </div>
-              <br>
+              <span class="card-title activator grey-text text-darken-4">Click for Movie Info<i class="material-icons right"></i></span>
+            <p><a href="#"></a></p>
+          </div>
+          <div class="card-reveal">
+            <span id = "rel-movie-1" class="card-title grey-text text-darken-4">Movie Title<i class="material-icons right">close</i></span>
+            <p id = "plot-similar-movie-1">Here is some more information about this movie that is only revealed once clicked on.</p>
+            <p id = "rel-rating-1"></p>
+             <br>
             </div>
           </div>
         </div>
@@ -87,13 +98,14 @@
               <img id="rel-poster-2" src="https://m.media-amazon.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_SX300.jpg">
             </div>
             <div class="card-content">
-              <div class="col s6" id="rel-movie-2">
-                Movie Title
-              </div>
-              <div class="col s6 rating" id="rel-rating-2">
-                rating:__
-              </div>
-              <br>
+              <span class="card-title activator grey-text text-darken-4">Click for Movie Info<i class="material-icons right"></i></span>
+            <p><a href="#"></a></p>
+          </div>
+          <div class="card-reveal">
+            <span id = "rel-movie-2" class="card-title grey-text text-darken-4">Movie Title<i class="material-icons right">close</i></span>
+            <p id = "plot-similar-movie-2">Here is some more information about this movie that is only revealed once clicked on.</p>
+            <p id = "rel-rating-2"></p>
+             <br>
             </div>
           </div>
         </div>
@@ -104,13 +116,14 @@
               <img id="rel-poster-3" src="https://m.media-amazon.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_SX300.jpg">
             </div>
             <div class="card-content">
-              <div class="col s6" id="rel-movie-3">
-                Movie Title
-              </div>
-              <div class="col s6 rating" id="rel-rating-3">
-                rating:__
-              </div>
-              <br>
+              <span class="card-title activator grey-text text-darken-4">Click for Movie Info<i class="material-icons right"></i></span>
+            <p><a href="#"></a></p>
+          </div>
+          <div class="card-reveal">
+            <span id = "rel-movie-3" class="card-title grey-text text-darken-4">Movie Title<i class="material-icons right">close</i></span>
+            <p id = "plot-similar-movie-3">Here is some more information about this movie that is only revealed once clicked on.</p>
+            <p id = "rel-rating-3"></p>
+             <br>
             </div>
           </div>
         </div>
@@ -131,9 +144,13 @@
   crossorigin="anonymous">
   </script>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <script src = "assets/js/script_1.js"></script>
   <script src = "assets/js/script_2.js"></script>
 =======
+=======
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+>>>>>>> 23746f1094ebc90da2354960f8e3cc8c37ac13f0
   <script type="text/javascript" src="assets/js/script_1.js"></script>
   <script type="text/javascript" src="assets/js/script_2.js"></script>
 
